@@ -9,6 +9,30 @@
     <meta property="og:description" content="An AI-powered stock research desk for traders, delivering live search-grounded market technicals, key levels, and risk/reward setups." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function() {
+        try {
+          var origFetch = window.fetch;
+          var desc = Object.getOwnPropertyDescriptor(window, 'fetch') || 
+                     (window.Window && Object.getOwnPropertyDescriptor(window.Window.prototype, 'fetch'));
+          if (!desc || !desc.set || !desc.writable) {
+            var activeFetch = origFetch ? origFetch.bind(window) : null;
+            Object.defineProperty(window, 'fetch', {
+              get: function() {
+                return activeFetch;
+              },
+              set: function(fn) {
+                activeFetch = fn;
+              },
+              configurable: true,
+              enumerable: true,
+            });
+          }
+        } catch (e) {
+          // Fallback if environment restricts property definition
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
