@@ -1,0 +1,6 @@
+{
+  "name": "Aperture - AI Stock Research Desk",
+  "description": "An AI-powered stock research desk for traders, delivering live search-grounded market technicals, key levels, and risk/reward setups.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
