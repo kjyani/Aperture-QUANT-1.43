@@ -121,14 +121,14 @@ export default function App() {
     setCurrentTicker(ticker);
     setError(null);
     setIsLoading(true);
-    setLoadingStep(`Connecting live telemetry for $${ticker}...`);
+    setLoadingStep(`Connecting live telemetry & OHLCV candles for $${ticker}...`);
 
     const stepTimer1 = setTimeout(() => {
-      setLoadingStep(`Grounding spot quote, earnings calendar & financial news...`);
+      setLoadingStep(`Scanning chart patterns, 20/50 EMAs, RSI & false-call confluence...`);
     }, 2000);
 
     const stepTimer2 = setTimeout(() => {
-      setLoadingStep(`Calculating key levels, risk/reward geometry & thesis...`);
+      setLoadingStep(`Formulating disciplined strategy, risk-adjusted sizing & thesis...`);
     }, 5500);
 
     try {
@@ -431,10 +431,10 @@ export default function App() {
                     01
                   </div>
                   <h4 className="font-semibold text-xs font-mono uppercase text-slate-900">
-                    Live Web Grounding
+                    Live OHLCV Feed
                   </h4>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                    Queries Google Search grounding to retrieve real-time quotes, intraday ranges, and official financial press.
+                    Pulls real-time exchange candles, intraday highs/lows, 20/50 EMAs, RSI, and ATR for verified price structure.
                   </p>
                 </div>
 
@@ -443,10 +443,10 @@ export default function App() {
                     02
                   </div>
                   <h4 className="font-semibold text-xs font-mono uppercase text-slate-900">
-                    Market Structure
+                    Pattern Recognition
                   </h4>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                    Evaluates multi-timeframe trend orientation, key support ladders, resistance boundaries, and momentum flow.
+                    Identifies high-probability chart patterns (Bull Flags, Ascending Triangles, Double Bottoms) with mapped trendlines.
                   </p>
                 </div>
 
@@ -455,10 +455,10 @@ export default function App() {
                     03
                   </div>
                   <h4 className="font-semibold text-xs font-mono uppercase text-slate-900">
-                    Earnings & Catalysts
+                    Anti-Trap Discipline
                   </h4>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                    Tracks upcoming earnings schedule, historical EPS beats/misses, forward guidance tone, and macro catalysts.
+                    5-point confluence filter strictly rejects overbought FOMO chases and prevents wrong calls in bearish breakdowns.
                   </p>
                 </div>
 
@@ -467,10 +467,10 @@ export default function App() {
                     04
                   </div>
                   <h4 className="font-semibold text-xs font-mono uppercase text-slate-900">
-                    Geometric Setup
+                    Capital Risk Sizing
                   </h4>
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                    Calculates invalidation stop-loss levels, reference entry zones, dual profit targets, and risk/reward ratio.
+                    Calculates exact share/rToken allocation, structural stop loss, and dual targets ensuring favorable risk/reward.
                   </p>
                 </div>
               </div>

@@ -13,6 +13,8 @@ import {
   FileText
 } from 'lucide-react';
 import { ResearchReport } from '../types';
+import { LiveTechnicalChart } from './LiveTechnicalChart';
+import { DisciplinedStrategyView } from './DisciplinedStrategyView';
 
 interface ReportViewProps {
   report: ResearchReport;
@@ -177,7 +179,29 @@ DISCLAIMER: AI-generated research for informational purposes only. Not financial
         </div>
       </div>
 
-      {/* 2. Analyst Thesis & Market Context */}
+      {/* 2. Interactive Live Technical Chart & Pattern Recognition Overlay */}
+      <LiveTechnicalChart
+        ticker={report.ticker}
+        initialCandles={report.chartCandles}
+        initialIndicators={report.indicators}
+        initialPattern={report.detectedPattern}
+        currentPrice={report.currentPrice}
+        currency={report.currency}
+        companyName={report.companyName}
+      />
+
+      {/* 3. Improved Institutional Strategy & Capital Preservation Guard */}
+      <DisciplinedStrategyView
+        strategy={report.strategy}
+        currentPrice={report.currentPrice}
+        currency={report.currency}
+        ticker={report.ticker}
+        tp1={report.takeProfitLevels?.[0]?.level}
+        tp2={report.takeProfitLevels?.[1]?.level}
+        stopLoss={report.stopLoss?.level}
+      />
+
+      {/* 4. Analyst Thesis & Market Context */}
       <div className="rounded-3xl apple-glass p-6 sm:p-7">
         <div className="flex items-center space-x-2 pb-3 mb-3.5 border-b border-slate-900/[0.06] font-mono">
           <FileText className="w-4 h-4 text-sky-600" />
